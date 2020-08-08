@@ -1,0 +1,27 @@
+@import 'styles/_variables.scss';
+@import 'styles/_mixins.scss';
+
+.app-header {
+  a {
+    color: $navLinkColor;
+    &:hover {
+      color: $navLinkHoverColor;
+    }
+  }
+
+  a.active {
+    color: $navActiveLink;
+  }
+
+  .burger-menu {
+    color: white;
+  }
+
+  @include tablet {
+    background-color: red;
+  }
+
+  @include desktop {
+    
+  }
+}

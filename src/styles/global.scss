@@ -1,0 +1,52 @@
+@import 'styles/_fonts.scss';
+@import 'styles/_reset.scss';
+@import 'styles/_variables.scss';
+@import 'styles/_mixins.scss';
+
+//  Global layout
+.root {
+  display: flex;
+  height: 100vh;
+}
+.app-header {
+  flex: none;
+  width: 100px;
+  height: 100%;
+}
+.app-body {
+  flex: 1 0 0;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+
+.mobile {
+  display: flex;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+}
+.not-mobile {
+  display: none;
+  @media (min-width: $tablet) {
+    display: flex;
+  }
+}
+.desktop {
+  display: none;
+  @media (min-width: $desktop) {
+    display: flex;
+  }
+}
+
+// LAYOUT CLASSES
+.row {
+  display: flex;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+
